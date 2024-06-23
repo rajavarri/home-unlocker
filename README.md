@@ -99,6 +99,8 @@ home-unlocker/
 # Screenshots
 
 ![Login Screen](src/assets/screenshots/login_screen.png)
+![HomeListScreen](src/assets/screenshots/homesList.png)
+![HomeDetailsScreen](src/assets/screenshots/homeDetails.png)
 
 # Major Dependencies Installed
 
