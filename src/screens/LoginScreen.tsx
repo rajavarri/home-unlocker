@@ -1,32 +1,32 @@
-import React, {useState, useContext, useEffect} from 'react';
-import {View, Text, StyleSheet, Alert, PermissionsAndroid} from 'react-native';
-import AppContext from '../context/AppContext';
-import {RootStackParamList} from '../routes/types';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {logInApi} from '../services/authService';
-import {Button, TextInput} from 'react-native-paper';
-import {appColorsCode} from '../styles/colorCodes';
-import Toast from 'react-native-toast-message';
+import React, { useState, useContext, useEffect } from "react";
+import { View, Text, StyleSheet, PermissionsAndroid } from "react-native";
+import AppContext from "../context/AppContext";
+import { RootStackParamList } from "../routes/types";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { logInApi } from "../services/authService";
+import { Button, TextInput } from "react-native-paper";
+import { appColorsCode } from "../styles/colorCodes";
+import Toast from "react-native-toast-message";
 
 type SignInScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
-  'Login'
+  "Login"
 >;
 
 type Props = {
   navigation: SignInScreenNavigationProp;
 };
 
-const LoginScreen = ({navigation}: Props) => {
+const LoginScreen = ({ navigation }: Props) => {
   const context = useContext(AppContext);
 
   if (!context) {
     return null;
   }
 
-  const {dispatch} = context;
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const { dispatch } = context;
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [hidePassword, setHidePassword] = useState(true);
 
   useEffect(() => {
@@ -37,12 +37,12 @@ const LoginScreen = ({navigation}: Props) => {
     try {
       //requesting user location permission
       const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log('You can use the location');
+        console.log("You can use the location");
       } else {
-        console.log('location permission denied');
+        console.log("location permission denied");
       }
     } catch (err) {
       console.warn(err);
@@ -58,37 +58,37 @@ const LoginScreen = ({navigation}: Props) => {
     try {
       const result = await logInApi(loginCredentials);
 
-      if (typeof result === 'string') {
+      if (typeof result === "string") {
         Toast.show({
-          type: 'error',
+          type: "error",
           text1: `${result}`,
           autoHide: true,
           visibilityTime: 3000,
-          position: 'bottom',
+          position: "bottom",
           bottomOffset: 20,
         });
       } else {
         // Dispatch login action and navigate to HomeList
         // As we have a dispatch function available from our AppContext
-        dispatch({type: 'LOGIN', payload: result}); // Dispatch the user data
+        dispatch({ type: "LOGIN", payload: result }); // Dispatch the user data
         Toast.show({
-          type: 'success',
-          text1: 'Login Successful',
+          type: "success",
+          text1: "Login Successful",
           autoHide: true,
           visibilityTime: 3000,
-          position: 'bottom',
+          position: "bottom",
           bottomOffset: 20,
         });
-        navigation.navigate('HomeList');
+        navigation.navigate("HomeList");
       }
     } catch (error) {
-      console.error('Login Error:', error);
+      console.error("Login Error:", error);
       Toast.show({
-        type: 'error',
+        type: "error",
         text1: "Login Failed', 'An error occurred during login.",
         autoHide: true,
         visibilityTime: 3000,
-        position: 'bottom',
+        position: "bottom",
         bottomOffset: 80,
       });
     }
@@ -96,13 +96,14 @@ const LoginScreen = ({navigation}: Props) => {
 
   return (
     <View
-      style={[styles.container, {backgroundColor: appColorsCode.background}]}>
+      style={[styles.container, { backgroundColor: appColorsCode.background }]}
+    >
       <Text style={styles.title}>Login</Text>
-      <View style={[styles.formParentView, {marginBottom: 10}]}>
+      <View style={[styles.formParentView, { marginBottom: 10 }]}>
         <TextInput
           mode="outlined"
           label="Enter username"
-          textContentType={'username'}
+          textContentType={"username"}
           selectionColor={appColorsCode.primary}
           textColor={appColorsCode.secondary}
           textAlign="center"
@@ -130,7 +131,7 @@ const LoginScreen = ({navigation}: Props) => {
         <TextInput
           mode="outlined"
           label="Enter password"
-          textContentType={'password'}
+          textContentType={"password"}
           selectionColor={appColorsCode.primary}
           textColor={appColorsCode.secondary}
           textAlign="center"
@@ -169,39 +170,39 @@ const LoginScreen = ({navigation}: Props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
     padding: 16,
-    alignItems: 'center',
+    alignItems: "center",
   },
   title: {
     fontSize: 24,
     marginBottom: 30,
-    textAlign: 'center',
-    fontWeight: '600',
+    textAlign: "center",
+    fontWeight: "600",
   },
   formParentView: {
-    width: '100%',
+    width: "100%",
     paddingHorizontal: 18,
   },
   input: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: "gray",
     borderWidth: 1,
     marginBottom: 16,
     paddingHorizontal: 8,
     borderRadius: 8,
-    width: '100%',
+    width: "100%",
   },
   loginButton: {
-    width: '80%',
+    width: "80%",
     height: 40,
     borderRadius: 8,
-    textAlign: 'center',
-    fontWeight: '600',
+    textAlign: "center",
+    fontWeight: "600",
     marginTop: 20,
   },
   textInput: {
-    width: '100%',
+    width: "100%",
     height: 50,
     borderRadius: 4,
     fontSize: 16,
@@ -213,7 +214,7 @@ const styles = StyleSheet.create({
     paddingTop: 0,
     paddingBottom: 0,
   },
-  passwordIcon: {alignItems: 'center', paddingTop: 7},
+  passwordIcon: { alignItems: "center", paddingTop: 7 },
 });
 
 export default LoginScreen;

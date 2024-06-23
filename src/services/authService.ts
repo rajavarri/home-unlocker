@@ -1,6 +1,6 @@
 // authservice.ts
 
-import usersData from '../mock/users.json';
+import usersData from "../mock/users.json";
 
 export const logInApi = async (loginCredentials: {
   userName: string;
@@ -13,14 +13,14 @@ export const logInApi = async (loginCredentials: {
   //   return 'Password Incorrect';
   // }
   let userIndex = usersData.findIndex(
-    eachUser => eachUser.username === loginCredentials.userName,
+    (eachUser) => eachUser.username === loginCredentials.userName
   );
   if (userIndex === -1) {
-    return 'Invalid User';
+    return "Invalid User";
   }
   if (userIndex > -1) {
     if (usersData[userIndex].password !== loginCredentials?.password) {
-      return 'Invalid Password';
+      return "Invalid Password";
     }
 
     return usersData[userIndex]; // Return the user data after successful login

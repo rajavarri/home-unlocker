@@ -1,4 +1,4 @@
-import React, {useEffect, useContext, useState} from 'react';
+import React, { useEffect, useContext, useState } from "react";
 import {
   View,
   Text,
@@ -6,37 +6,35 @@ import {
   TouchableOpacity,
   StyleSheet,
   Image,
-} from 'react-native';
-import AppContext from '../context/AppContext';
-import {RootStackParamList} from '../routes/types';
-import {StackNavigationProp} from '@react-navigation/stack';
-import homesData from '../mock/homes.json';
-import {getHomesList} from '../services/homeService';
-import {RoleType} from '../enums/roleTypeEnum';
-import {Home} from '../types';
-import CustomHeader from '../../shared/CustomHeader';
-import {appColorsCode} from '../styles/colorCodes';
-import {useTheme} from 'react-native-paper';
+} from "react-native";
+import AppContext from "../context/AppContext";
+import { RootStackParamList } from "../routes/types";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { getHomesList } from "../services/homeService";
+import { RoleType } from "../enums/roleTypeEnum";
+import { Home } from "../types";
+import CustomHeader from "../../shared/CustomHeader";
+import { appColorsCode } from "../styles/colorCodes";
+import { useTheme } from "react-native-paper";
 
 type SignInScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
-  'HomeList'
+  "HomeList"
 >;
 
 type Props = {
   navigation: SignInScreenNavigationProp;
 };
 
-const HomeListScreen = ({navigation}: Props) => {
-  const {colors} = useTheme();
+const HomeListScreen = ({ navigation }: Props) => {
   const context = useContext(AppContext);
 
   if (!context) {
     return null;
   }
 
-  const {state, dispatch} = context;
-  const {user} = context.state;
+  const { state, dispatch } = context;
+  const { user } = context.state;
 
   const [homesList, setHomesList] = useState<Array<Home>>([]);
 
@@ -49,9 +47,9 @@ const HomeListScreen = ({navigation}: Props) => {
         };
         const homes = getHomesList(userData?.id, user?.role === RoleType.ADMIN);
         setHomesList(homes);
-        dispatch({type: 'SET_HOMES', payload: homes});
+        dispatch({ type: "SET_HOMES", payload: homes });
       } catch (error) {
-        dispatch({type: 'SET_ERROR', payload: 'Failed to load homes'});
+        dispatch({ type: "SET_ERROR", payload: "Failed to load homes" });
       }
     };
     fetchHomes();
@@ -62,15 +60,20 @@ const HomeListScreen = ({navigation}: Props) => {
       <CustomHeader title="Home List" navigation={navigation} />
       {state.error && <Text style={styles.error}>{state.error}</Text>}
       <View
-        style={[styles.container, {backgroundColor: appColorsCode.background}]}>
+        style={[
+          styles.container,
+          { backgroundColor: appColorsCode.background },
+        ]}
+      >
         <FlatList
           data={homesList}
-          keyExtractor={item => item.id.toString()}
-          renderItem={({item}) => (
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.homeContainer}
-              onPress={() => navigation.navigate('HomeDetail', {home: item})}>
-              <Image source={{uri: item.image}} style={styles.image} />
+              onPress={() => navigation.navigate("HomeDetail", { home: item })}
+            >
+              <Image source={{ uri: item.image }} style={styles.image} />
               <View style={styles.textContainer}>
                 <Text style={styles.address}>{item.address.addressLine}</Text>
                 <Text style={styles.description}>{item.description}</Text>
@@ -89,13 +92,13 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   error: {
-    color: 'red',
+    color: "red",
   },
   homeContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: "#ccc",
   },
   image: {
     width: 50,
@@ -104,11 +107,11 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   address: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: appColorsCode.secondary,
   },
   description: {
