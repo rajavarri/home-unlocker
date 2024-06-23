@@ -1,0 +1,257 @@
+[
+    {
+        "id": 1,
+        "address": {
+            "addressLine": "1, MG Road",
+            "city": "Bangalore",
+            "pincode": "560001",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Modern apartment in the heart of Bangalore.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "location": {
+            "latitude": 12.9715987,
+            "longitude": 77.5945627
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 2,
+        "address": {
+            "addressLine": "2, Indiranagar",
+            "city": "Bangalore",
+            "pincode": "560038",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Beautiful house with a spacious garden.",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "location": {
+            "latitude": 12.9715987,
+            "longitude": 77.5945627
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 3,
+        "address": {
+            "addressLine": "3, JP Nagar",
+            "city": "Bangalore",
+            "pincode": "560078",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Luxurious villa with a private pool.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "location": {
+            "latitude": 12.891829,
+            "longitude": 77.584189
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 4,
+        "address": {
+            "addressLine": "4, Whitefield",
+            "city": "Bangalore",
+            "pincode": "560066",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Elegant home with modern amenities.",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "location": {
+            "latitude": 12.9715987,
+            "longitude": 77.5945627
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 5,
+        "address": {
+            "addressLine": "5, Hebbal",
+            "city": "Bangalore",
+            "pincode": "560024",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Cozy apartment near the lake.",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "location": {
+            "latitude": 12.9716027,
+            "longitude": 77.5945600
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 6,
+        "address": {
+            "addressLine": "6, Banjara Hills",
+            "city": "Hyderabad",
+            "pincode": "500034",
+            "state": "Telangana",
+            "country": "India"
+        },
+        "description": "Spacious flat in a prime location.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "location": {
+            "latitude": 17.412348,
+            "longitude": 78.448558
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 7,
+        "address": {
+            "addressLine": "7, Jubilee Hills",
+            "city": "Hyderabad",
+            "pincode": "500033",
+            "state": "Telangana",
+            "country": "India"
+        },
+        "description": "Stylish residence with beautiful interiors.",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "location": {
+            "latitude": 17.425278,
+            "longitude": 78.411111
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 8,
+        "address": {
+            "addressLine": "8, Madhapur",
+            "city": "Hyderabad",
+            "pincode": "500081",
+            "state": "Telangana",
+            "country": "India"
+        },
+        "description": "Contemporary apartment with city views.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "location": {
+            "latitude": 17.448292,
+            "longitude": 78.391440
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 9,
+        "address": {
+            "addressLine": "9, Gachibowli",
+            "city": "Hyderabad",
+            "pincode": "500032",
+            "state": "Telangana",
+            "country": "India"
+        },
+        "description": "Modern flat in a tech-savvy area.",
+        "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+        "location": {
+            "latitude": 17.440081,
+            "longitude": 78.348916
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 10,
+        "address": {
+            "addressLine": "10, Kondapur",
+            "city": "Hyderabad",
+            "pincode": "500084",
+            "state": "Telangana",
+            "country": "India"
+        },
+        "description": "Lovely home with a large balcony.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "location": {
+            "latitude": 17.472222,
+            "longitude": 78.370833
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 11,
+        "address": {
+            "addressLine": "11, Koramangala",
+            "city": "Bangalore",
+            "pincode": "560034",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Charming house in a vibrant neighborhood.",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "location": {
+            "latitude": 12.934533,
+            "longitude": 77.626579
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 12,
+        "address": {
+            "addressLine": "12, Marathahalli",
+            "city": "Bangalore",
+            "pincode": "560037",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Comfortable apartment close to tech parks.",
+        "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+        "location": {
+            "latitude": 12.956847,
+            "longitude": 77.701135
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 13,
+        "address": {
+            "addressLine": "13, HSR Layout",
+            "city": "Bangalore",
+            "pincode": "560102",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Spacious villa with a beautiful garden.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "location": {
+            "latitude": 12.914142,
+            "longitude": 77.644944
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 14,
+        "address": {
+            "addressLine": "14, Jayanagar",
+            "city": "Bangalore",
+            "pincode": "560041",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Well-maintained house in a serene area.",
+        "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+        "location": {
+            "latitude": 12.925007,
+            "longitude": 77.593803
+        },
+        "state": "unlocked"
+    },
+    {
+        "id": 15,
+        "address": {
+            "addressLine": "15, Yelahanka",
+            "city": "Bangalore",
+            "pincode": "560064",
+            "state": "Karnataka",
+            "country": "India"
+        },
+        "description": "Newly constructed apartment with modern design.",
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "location": {
+            "latitude": 13.092998,
+            "longitude": 77.575027
+        },
+        "state": "unlocked"
+    }
+]

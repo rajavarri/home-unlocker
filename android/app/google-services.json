@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490135407705",
+    "project_id": "homeunlocker",
+    "storage_bucket": "homeunlocker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490135407705:android:83f99037d3931b374af548",
+        "android_client_info": {
+          "package_name": "com.homeunlocker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQpPWsWkPlKq9oPpY2uCtD4LpAPw44gnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
