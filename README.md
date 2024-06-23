@@ -96,6 +96,10 @@ home-unlocker/
 |-- App.tsx
 |-- NotificationConfig.ts
 
+# Screenshots
+
+![Login Screen](src/assets/screenshots/login_screen.png)
+
 # Major Dependencies Installed
 
 -> react-native: The core framework for building native apps using React.
