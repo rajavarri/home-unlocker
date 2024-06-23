@@ -62,39 +62,39 @@ This is one way to run your app — you can also run it directly from within And
 ## Project Structure:
 
 home-unlocker/
-├── src/
-│ ├── config/
-│ │ └── config.ts
-│ ├── enums/
-│ │ ├── homeStateEnum.ts
-│ │ └── roleTypeEnum.ts
-│ ├── mock/
-│ │ ├── homes.json
-│ │ └── users.json
-│ ├── navigation/
-│ │ └── index.tsx
-│ ├── screens/
-│ │ ├── loginScreen.tsx
-│ │ ├── homeListScreen.tsx
-│ │ └── homeDetailsScreen.tsx
-│ ├── styles/
-│ │ ├── colorCodes.tsx
-│ │ └── globalStyles.tsx
-│ ├── routes/
-│ │ └── types.tsx
-│ ├── utils/
-│ │ ├── ignoreWarning.ts
-│ │ └── distanceCalculator.ts
-│ ├── services/
-│ │ ├── homeService.ts
-│ │ └── authService.ts
-├── types.ts
-├── index.js
-├── package.json
-├── tsconfig.json
-├── yarn.lock
-├── App.tsx
-└── NotificationConfig.ts
+|-- src/
+| |-- config/
+| | |-- config.ts
+| |-- enums/
+| | |-- homeStateEnum.ts
+| | |-- roleTypeEnum.ts
+| |-- mock/
+| | |-- homes.json
+| | |-- users.json
+| |-- navigation/
+| | |-- index.tsx
+| |-- screens/
+| | |-- loginScreen.tsx
+| | |-- homeListScreen.tsx
+| | |-- homeDetailsScreen.tsx
+| |-- styles/
+| | |-- colorCodes.tsx
+| | |-- globalStyles.tsx
+| |-- routes/
+| | |-- types.tsx
+| |-- utils/
+| | |-- ignoreWarning.ts
+| | |-- distanceCalculator.ts
+| |-- services/
+| | |-- homeService.ts
+| | |-- authService.ts
+|-- types.ts
+|-- index.js
+|-- package.json
+|-- tsconfig.json
+|-- yarn.lock
+|-- App.tsx
+|-- NotificationConfig.ts
 
 # Major Dependencies Installed
 
