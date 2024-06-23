@@ -63,36 +63,38 @@ This is one way to run your app — you can also run it directly from within And
 
 home-unlocker/
 ├── src/
-│ ├── config/config.ts
+│ ├── config/
+│ │ └── config.ts
 │ ├── enums/
 │ │ ├── homeStateEnum.ts
-│ │ ├── roleTypeEnum.ts
+│ │ └── roleTypeEnum.ts
 │ ├── mock/
 │ │ ├── homes.json
-│ │ ├── users.json
+│ │ └── users.json
 │ ├── navigation/
-│ │ ├── index.tsx
+│ │ └── index.tsx
 │ ├── screens/
 │ │ ├── loginScreen.tsx
 │ │ ├── homeListScreen.tsx
-│ │ ├── homeDetailsScreen.tsx
+│ │ └── homeDetailsScreen.tsx
 │ ├── styles/
 │ │ ├── colorCodes.tsx
-│ │ ├── globalStyles.tsx
+│ │ └── globalStyles.tsx
 │ ├── routes/
-│ │ ├── types.tsx
+│ │ └── types.tsx
 │ ├── utils/
 │ │ ├── ignoreWarning.ts
+│ │ └── distanceCalculator.ts
 │ ├── services/
 │ │ ├── homeService.ts
-│ │ ├── authService.ts
+│ │ └── authService.ts
 ├── types.ts
 ├── index.js
 ├── package.json
 ├── tsconfig.json
 ├── yarn.lock
 ├── App.tsx
-├── NotificationConfig.ts
+└── NotificationConfig.ts
 
 # Major Dependencies Installed
 
